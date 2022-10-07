@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+   <title>Czech Phones</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
+</h:head>
+<h:body>
+   <div class="container">
+      <h1>Create new product</h1>
+      <h:form>
+         <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <h:inputText value="#{createProductBean.newProduct.name}" class="form-control" id="title" placeholder="name@example.com" />
+         </div>
+         <div class="mb-3">
+            <label for="dsc" class="form-label">Description</label>
+            <h:inputTextarea value="#{createProductBean.newProduct.description}" class="form-control" id="dsc" rows="3" />
+         </div>
+         <h:commandButton action="#{createProductBean.save() }" value="Save" class="btn btn-primary"/>
+      </h:form>
+   </div>
+</h:body>
+</html>
