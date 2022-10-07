@@ -1,4 +1,4 @@
-package cz.martin.cms;
+package cz.martin.cms.models;
 
 public class Article {
     private String title;
